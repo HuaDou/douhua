@@ -9,10 +9,10 @@ class text_processor
     public:  
         string process(const string &text, unsigned long width);  
     private:  
-        string Int_to_String(int start_line,int end_line);  //求出 节 所在行
-        bool check_text(const string &text);  //判断 文本 是否含有非法字符
-        bool check_width(unsigned long width); //判断 宽度 是否超出范围 
-        bool is_Alpha(char ch); //判断 字符 是否为英文字母 
+        string segment_lines(int start_line,int end_line);  
+        bool check_text(const string &text);  
+        bool check_width(unsigned long width);  
+        bool is_Alpha(char ch);  
 };  
  ```    
  
