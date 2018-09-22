@@ -21,12 +21,12 @@ class text_processor
 ### Exception 
 1.Invaild characters：Characters other than whitespace and Englis characters. Return "ERROR: Invalid character detected!".  
 2.Width out of range：Width should be in [10,80],otherwise return "ERROR: Width out of range!".    
-## Build  
+## Build in Linux 
 `$ cd text_processor `  
 `$ g++ -std=c++11 text_processor.cpp -o text_processor`  
 
 
-## Run  
+## Run in Linux  
 For example usage: text_processor width text  
   
 `$ ./text_processor 30 "The main theme of education in engineering school is learning to teach yourself"`  
