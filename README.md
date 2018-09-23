@@ -5,22 +5,26 @@ Text_processor is a small text preprocessor.The main function is to preprocess t
 
 ### Declaration of class  
 ```
-class text_processor  
-{  
-    public:  
-        string process(const string &text, unsigned long width);  
-    private:  
-        string segment_lines(int start_line,int end_line);  
-        bool check_text(const string &text);  
-        bool check_width(unsigned long width);  
-        bool is_Alpha(char ch);  
-};  
+class text_processor
+{
+    public:
+        string process(const string &text, unsigned long width);
+    private:
+        bool check_width(unsigned long width);
+        enum char_type get_char_type(char ch);
+        bool check_character(char ch);
+        string segment_lines(int start,int end,unsigned long width);
+};
  ```    
  
 
 ### Exception 
 1.Invaild characters：Characters other than whitespace and Englis characters. Return "ERROR: Invalid character detected!".  
-2.Width out of range：Width should be in [10,80],otherwise return "ERROR: Width out of range!".    
+2.Width out of range：Width should be in [10,80],otherwise return "ERROR: Width out of range!".  
+
+## Complier  
+GCC version should be hihger than 4.8.1.  
+ 
 ## Build in Linux 
 `$ cd text_processor `  
 `$ g++ -std=c++11 text_processor.cpp -o text_processor`  
